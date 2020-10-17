@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/master.css">
+    <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script>
+
+    <title>Teste</title>
+  </head>
+  <body>
+    <div class="Teste" id="app">
+      <div>Completed Todos: {{ doneTodosCount }}</div>
+      <div v-for='t in todos'>
+        {{t.text}} | 
+        <span v-if='t.done'>Done</span>
+        <span v-if='!t.done'>Not Done</span>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
